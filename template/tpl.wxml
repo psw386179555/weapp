@@ -1,0 +1,22 @@
+<!--商品模板-->
+<template name="good">
+<navigator url="../../pages/detail/detail?id={{item.id}}" hover-class="none">
+  <view class="weui-cells good">
+    <image src="{{item.thumb}}" class="goods-img"></image>
+    <view class="weui-cell__bd">{{item.title}}</view>
+    <view class="weui-cell">
+      <view class="weui-cell__bd">
+        <text class="money">￥{{item.marketprice}}</text>
+        <text class="sale">已售{{item.sales}}</text>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access good-more" >
+        查看详情
+      </view>
+    </view>
+  </view>
+  </navigator>
+  </template>
+
+  <template name="index-load">
+
+  </template>

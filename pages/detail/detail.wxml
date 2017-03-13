@@ -1,0 +1,122 @@
+
+<!--pages/detail/detail.wxml-->
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for-items="{{tabs}}" wx:key="{{index}}">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <view class="weui-tab__panel">
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <swiper indicator-dots="true" autoplay="true" interval="3000" duration="500" style="width: 100%">
+            <swiper-item wx:for="{{imgUrls}}">
+              <image src="{{item}}" class="slide-image" />
+            </swiper-item>
+          </swiper>
+
+          <!--商品幻灯片-->
+          <view class="weui-cells" style="margin-top:0px;">
+            <view class="weui-cell">
+              <view class="marketprice">￥ {{goodsdetail.marketprice}}</view>
+              <view class="productprice">￥ {{goodsdetail.productprice}}</view>
+
+              <!--<view class="sales">销量：{{goodsdetail.sales}}</view>-->
+            </view>
+            <view class="weui-cell">
+              {{goodsdetail.title}}
+            </view>
+            <view class="weui-flex weui-cell servie">
+              <view class="weui-flex__item" style="flex: 1">
+                <icon type="success" size="15"></icon>江大包邮</view>
+              <view class="weui-flex__item" style="flex: 1">
+                <icon type="success" size="15"></icon>体验服务</view>
+              <view class="weui-flex__item" style="flex: 1">
+                <icon type="success" size="15"></icon>48小时</view>
+            </view>
+          </view>
+        </view>
+
+        <!--选项一内容-->
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <block wx:for="{{goodsdetail.content}}">
+            <image class="content_img" src="{{item}}"></image>
+          </block>
+        </view>
+
+        <!--选项二内容-->
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+          <view class="weui-cells weui-cells_after-title">
+            <block wx:for="{{goodsdetail.param}}">
+              <view class="weui-cell">
+                <view class="weui-cell__hd">{{item.title}}</view>
+                <view class="weui-cell__bd"></view>
+                <view class="weui-cell__ft">{{item.value}}</view>
+              </view>
+            </block>
+          </view>
+        </view>
+
+        <!--选项三内容-->
+      </view>
+    </view>
+    <view class="weui-flex bottom-tab">
+      <view class="weui-flex__item bottom-left" bindtap="clickTiyan">我要体验</view>
+      <!--<view class="weui-flex__item bottom-mid" bindtap="addCart">加入购物车</view>
+      <view class="weui-flex__item bottom-right" bindtap="clickPay">立即支付</view>-->
+    </view>
+
+    <!--底部tab-->
+
+    <!--option窗口-->
+    <view class="opton-shade" hidden="{{shade}}"></view>
+    <view class="option-container" animation="{{animationOption}}">
+      <image class="option_del" src="/img/del.png" bindtap="optionDel"></image>
+      <view class="option_spec">
+        <image bindtap="previewImg" data-thumb="{{optionimg}}" src="{{optionimg}}"></image>
+        <text class="option_price">￥{{goodsdetail.marketprice}}</text>
+        <view style="color:red">{{notice}}</view>
+      </view>
+
+      <!--上-->
+      <view class="option_spec">
+        <view>{{optionColorTitle}}</view>
+        <view>
+          <block wx:for="{{optionColor}}">
+            <text class="text-no {{item.id == currentColorId ? 'bar-hover' : ''}}" data-id="{{item.id}}" data-title="0" data-thumb="{{item.thumb}}" bindtap="chooseSpec">{{item.title}}</text>
+          </block>
+        </view>
+      </view>
+
+      <!--颜色-->
+      <view class="option_spec">
+        <view>{{optionSizeTitle}}</view>
+        <view>
+          <block wx:for="{{optionSize}}">
+            <text class="text-no {{item.id == currentSizeId ? 'bar-hover' : ''}}" data-id="{{item.id}}" data-title="1" data-thumb="{{item.thumb}}" bindtap="chooseSpec" >{{item.title}}</text>
+          </block>
+        </view>
+      </view>
+
+      <!--尺寸-->
+      <view class="option_spec">
+        <view>数量
+          <view class="option_num">
+            <text class="text-no" bindtap="minNum" data-num="{{Number}}"> - </text>
+            <text>{{Number}}</text>
+            <text class="text-no" bindtap="maxNum" data-num="{{Number}}"> + </text>
+          </view>
+        </view>
+      </view>
+
+      <!--数量-->
+      <view class="option_confirm"data-id="{{confirmId}}" data-size="{{currentSizeId}}" data-color="{{currentColorId}}" data-number="{{Number}}" data-thumb="{{optionimg}}" data-title="{{goodsdetail.title}}" bindtap="confirm">确定</view>
+
+      <!--确认-->
+    </view>
+  </view>
+</view>

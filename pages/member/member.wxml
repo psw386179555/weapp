@@ -1,0 +1,91 @@
+
+<!--pages/member/member.wxml-->
+<view class="page">
+  <view class="page__hd">
+    <view class="userinfo">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+  </view>
+  <view class="page__bd">
+
+    <!--订单部分-->
+    <view class="weui-cells">
+      <view class="weui-cell">
+        <view class="weui-cell__hd"></view>
+        <view class="weui-cell__bd">我的订单</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">
+          查看全部
+        </view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image src="/img/member-1.png"></image>
+            <view class="img-text">待付款</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image src="/img/member-2.png"></image>
+            <view class="img-text">待发货</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image src="/img/member-3.png"></image>
+            <view class="img-text">待收货</view>
+          </view>
+        </view>
+        <view class="weui-flex__item">
+          <view class="placeholder">
+            <image src="/img/member-4.png"></image>
+            <view class="img-text">待评价</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!--功能项-->
+    <view class="weui-cells">
+      <navigator url="" class="weui-cell weui-cell_access">
+        <view class="weui-cell__hd">
+          <image src="/img/tiyan.png"></image>
+        </view>
+        <view class="weui-cell__bd">我的体验包</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url="" class="weui-cell weui-cell_access" >
+        <view class="weui-cell__hd">
+          <image src="/img/coupon.png"></image>
+        </view>
+        <view class="weui-cell__bd">我的优惠券</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url="" class="weui-cell weui-cell_access" >
+        <view class="weui-cell__hd">
+          <image src="/img/address.png"></image>
+        </view>
+        <view class="weui-cell__bd">我的地址</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+      <navigator url="" class="weui-cell weui-cell_access" >
+        <view class="weui-cell__hd">
+          <image src="/img/question.png"></image>
+        </view>
+        <view class="weui-cell__bd">常见问题</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+      </navigator>
+
+
+
+
+    
+    </view>
+  </view>
+
+  <!--页尾-->
+  <view class="weui-footer fixed-bottom">
+    <view class="weui-footer__text">Copyright © 2016-2017 e衫订制小程序</view>
+  </view>
+</view>

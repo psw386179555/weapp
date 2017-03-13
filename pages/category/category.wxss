@@ -1,0 +1,30 @@
+/* pages/category/category.wxss */
+
+page {
+  background-color: #f2f2f2;
+}
+
+.page__hd navigator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+}
+
+.page__bd {
+  margin-top: 50px;
+}
+.cates {
+  border: 2px solid white;
+  float: left;
+  width: 48%;
+}
+
+.cates image {
+  width:100%;
+}
+.cates view {
+  text-align: center;
+}
+

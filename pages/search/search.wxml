@@ -1,0 +1,20 @@
+
+<!--pages/search/search.wxml-->
+<view class="page-bd">
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+        <input type="text" class="weui-search-bar__input" placeholder="输入商品" focus="true" bindinput="inputTyping" />
+      </view>
+    </view>
+    <view class="weui-search-bar__cancel-btn" catchtap="searchGoods" data-searchword="{{inputVal}}">搜索</view>
+  </view>
+  <view class="searchword">
+  <view>历史记录<view class="clear" bindtap="clearStorage">清除</view></view>
+  <view><block wx:for="{{searchword}}">
+      <view class="keyword">{{item.val}}</view>
+    </block></view>
+    
+  </view>
+</view>

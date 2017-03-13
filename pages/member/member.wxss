@@ -1,0 +1,64 @@
+/* pages/member/member.wxss */
+page{
+  background-color: #eee;
+  
+}
+.page{
+  height: 100%;
+  width: 100%;
+
+}
+.page__hd {
+  background-color: #dc3737;
+  height:320rpx;
+  margin-bottom:-32rpx; 
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+  border: 5rpx solid #f0ae2c;
+}
+
+.userinfo-nickname {
+  color: white;
+}
+.placeholder {
+  margin: 5px;
+  padding: 0 10px;
+  text-align: center;
+  height: 2.5em;
+}
+
+.placeholder image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.img-text {
+  font-size: 25rpx;
+}
+
+.weui-cell__hd image {
+  margin-right:20rpx;
+  vertical-align: middle;
+  width: 40rpx;
+  height: 40rpx;
+}
+.weui-cell__ft{
+    vertical-align: middle;
+  font-size: 20rpx;
+
+}
+.fixed-bottom{
+margin-top:100rpx;
+margin-bottom:50rpx;
+}

@@ -1,0 +1,7 @@
+<!--pages/categorylist/categorylist.wxml-->
+<import src="../../template/tpl.wxml" />
+<view class="page">
+  <view class="page-bd">
+   <template is="good" data="{{item}}" wx:for="{{good}}" />
+</view>
+</view>

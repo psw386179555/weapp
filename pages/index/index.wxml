@@ -1,0 +1,71 @@
+<import src="../../template/tpl.wxml" />
+
+<!--index.wxml-->
+<view class="page">
+  <view class="page-bd">
+    <navigator class="nav-search" url="../../pages/search/search">
+      <view class="weui-search-bar">
+        <view class="weui-search-bar__form">
+          <view class="weui-search-bar__box">
+            <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+            <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+          </view>
+          <label class="weui-search-bar__label">
+            <icon class="weui-icon-search" type="search" size="14"></icon>搜索
+          </label>
+        </view>
+      </view>
+    </navigator>
+    <scroll-view class="goodscroll" scroll-y="true" bindscrolltolower="LoadMore" bindscroll="bindScroll" scroll-top="{{scrollTop}}">
+
+      <!--轮播图-->
+      <view style="margin-top:49px">
+        <swiper autoplay="true" interval="3000" indicatorDots="true">
+          <swiper-item wx:for="{{imgUrls}}" class="swiperimg">
+            <image src="{{item}}" height="500" />
+          </swiper-item>
+        </swiper>
+      </view>
+
+      <!--推荐部分-->
+      <view class="weui-cells tuijian" style="margin-top: 0px;">
+        <view class="weui-flex tuijian-inline">
+          <block wx:for="{{tuijianImg}}">
+          <navigator url="../../pages/categorylist/categorylist?name={{item.name}}&id={{item.id}}" hover-class="none" style="flex: 1">
+                      <view class="weui-flex__item img">
+              <image src="{{item.img}}"></image>
+              <view class="tuijian-text">{{item.text}}</view>
+            </view>
+          </navigator>
+
+          </block>
+        </view>
+      </view>
+
+      <!--部分商品展示部分-->
+      <template is="good" data="{{item}}" wx:for="{{good}}" />
+
+      <!--加载部分-->
+      <view class="weui-loadmore" hidden="{{loadMore}}">
+        <view class="weui-loading"></view>
+        <view class="weui-loadmore__tips">正在加载</view>
+      </view>
+      <view class="weui-loadmore weui-loadmore_line" hidden="{{loadMoreEnd}}">我也是有底线的
+      </view>
+    </scroll-view>
+  </view>
+  <view class="toTop" animation="{{animationTopData}}" bindtap="clickTotop">
+    <image src="/img/scrollTop.png"></image>
+    <view>顶部</view>
+  </view>
+</view>
+  <view class="enterload" hidden="{{enterload}}">
+  <view class="loadimg" hidden="{{loadimg}}">
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore__tips"></view>
+  </view>
+  <view class="loadagain" hidden="{{loadagain}}">
+    <image src="/img/fail.png"></image>
+    <view class="loadtext" bindtap="onLoad">重新加载</view>
+  </view>
+</view>

@@ -1,0 +1,70 @@
+/**app.wxss**/
+@import 'style/weui.wxss';
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+page{
+    font-family: "微软雅黑";
+    font-size: 25rpx;
+    background-color: #f2f2f2;
+}
+
+
+/*商品样式*/
+.good{
+  margin-top:15rpx;
+  padding:10rpx; 
+}
+.money{
+  color:#dc3737;
+  margin: 0rpx 5rpx 0rpx 5rpx;
+}
+.sale,.good-more{
+  font-size: 20rpx;
+}
+.goods-img{
+  width: 100%;
+}
+
+
+.enterload {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.loadimg .weui-loading {
+  padding: 10px;
+  margin-top: 40%;
+  margin-left: 45%;
+}
+
+.loadagain image {
+  width: 100px;
+  height: 80px;
+}
+
+.loadtext {
+  font-size: 16px;
+  color: #fff;
+  background-color: #dc3737;
+  border: 1px solid #dc3737;
+  border-radius: 10%;
+  width: 100px;
+  text-align: center;
+}
+
+.loadagain {
+  margin-top: 40%;
+  margin-left: 35%;
+}

@@ -1,0 +1,175 @@
+/* pages/detail/detail.wxss */
+
+page, .page, .page__bd {
+  height: 100%;
+}
+
+.page {
+  background-color: #f2f2f2;
+}
+
+.page__bd {
+  padding-bottom: 0;
+}
+
+.weui-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+.weui-tab__content {
+  text-align: center;
+  padding-bottom: 100rpx;
+}
+
+swiper {
+  width: 100%;
+  height: 600rpx;
+}
+
+swiper-item image {
+  width: 100%;
+  height: 100%;
+}
+
+.bottom-tab {
+  border-top: 1px solid #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  text-align: center;
+  font-size: 30rpx;
+  color: white;
+}
+
+.bottom-tab view {
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.bottom-left {
+  background-color: #EEB4B4;
+  color: black;
+}
+
+.bottom-mid {
+  background-color: orangered;
+}
+
+.bottom-right {
+  background-color: #dc3737;
+}
+
+.servie {
+  text-align: left;
+  color: darkgray;
+  font-size: 14px;
+}
+
+.weui-flex__item icon {
+  margin: 0px 5px;
+}
+
+.marketprice {
+  color: #dc3737;
+  margin-right: 10px;
+}
+
+.productprice {
+  color: darkgrey;
+  text-decoration: line-through;
+  font-size: 14px;
+}
+/*
+.content_img {
+  width: 100%;
+}*/
+
+/*option*/
+
+.opton-shade {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+}
+
+.option-container {
+  position: absolute;
+  position: fixed;
+  bottom: -450px;
+  left: 0;
+  z-index: 100;
+  background-color: white;
+  width: 100%;
+  height: 400px;
+  padding: 0px 10px;
+}
+
+.option_spec image {
+  width: 100px;
+  height: 100px;
+  border-radius: 5%;
+  border: 2px solid #fff;
+  margin: -40px 0px 0px 30px;
+  box-shadow: 0 0 10px #000;
+  background-color: #f2f2f2;
+}
+
+.option_del {
+  width: 15px;
+  height: 15px;
+  float: right;
+  margin-top: 10px;
+  margin-right: 15px;
+  padding: 5px;
+}
+
+.option_price {
+  margin: -15px 0px 0px 20px;
+  color: #dc3737;
+  font-size: 18px;
+}
+
+.option_spec {
+  border-top: 1px solid #f2f2f2;
+
+}
+
+.option_spec view {
+  margin: 10px 0px;
+    font-size: 12px;
+}
+
+.text-no {
+  margin: 5px 2.5px;
+  padding: 5px 20px;
+  background-color: #f2f2f2;
+  border-radius: 10%;
+
+}
+.option_confirm {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #dc3737;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.bar-hover{
+  background-color: #dc3737;
+  color:#fff;
+}

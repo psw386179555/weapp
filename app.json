@@ -1,0 +1,53 @@
+{
+  "pages": [
+
+    "pages/index/index",
+    "pages/search/search",
+    "pages/category/category",
+    "pages/categorylist/categorylist",
+    "pages/member/member",
+    "pages/cart/cart",
+     "pages/goodlist/goodlist",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#DC3737",
+    "navigationBarTitleText": "e衫订制",
+    "backgroundColor": "#eee",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#333",
+    "selectedColor": "#DC3737",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "position":"bottom",
+    "list": [
+      {
+        "iconPath": "img/home.png",
+        "selectedIconPath": "img/home1.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "iconPath": "img/category.png",
+        "selectedIconPath": "img/category1.png",
+        "pagePath": "pages/category/category",
+        "text": "分类"
+      },
+      {
+        "iconPath": "img/cart.png",
+        "selectedIconPath": "img/cart1.png",
+        "pagePath": "pages/cart/cart",
+        "text": "体验包"
+      },
+      {
+        "iconPath": "img/member.png",
+        "selectedIconPath": "img/member1.png",
+        "pagePath": "pages/member/member",
+        "text": "个人中心"
+      }
+    ]
+  }
+}

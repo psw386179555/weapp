@@ -1,0 +1,44 @@
+
+<!--pages/category/category.wxml-->
+<view class="page">
+  <view class="page__hd">
+    <navigator url="../../pages/search/search">
+      <view class="weui-search-bar">
+        <view class="weui-search-bar__form">
+          <view class="weui-search-bar__box">
+            <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+            <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+          </view>
+          <label class="weui-search-bar__label">
+            <icon class="weui-icon-search" type="search" size="14"></icon>搜索
+          </label>
+        </view>
+      </view>
+    </navigator>
+  </view>
+
+  <!--头部搜索-->
+  <view class="page__bd">
+  <block wx:for="{{section}}">
+  <navigator url="../../pages/categorylist/categorylist?id={{item.id}}&name={{item.name}}">
+    <view class="cates">
+      <image src="{{item.advimg}}"></image>
+      <view>{{item.name}}</view>
+    </view>
+    </navigator>
+    </block>
+  </view>
+
+</view>
+
+
+  <view class="enterload" hidden="{{enterload}}">
+  <view class="loadimg" hidden="{{loadimg}}">
+    <view class="weui-loading"></view>
+    <view class="weui-loadmore__tips"></view>
+  </view>
+  <view class="loadagain" hidden="{{loadagain}}">
+    <image src="/img/fail.png"></image>
+    <view class="loadtext" bindtap="onLoad">重新加载</view>
+  </view>
+</view>
